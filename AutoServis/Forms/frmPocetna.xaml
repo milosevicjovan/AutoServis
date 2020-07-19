@@ -1,0 +1,65 @@
+﻿<Window x:Class="AutoServis.Forms.frmPocetna"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoServis.Forms"
+        mc:Ignorable="d"
+        Title="frmPocetna" Height="700" Width="1300" WindowStyle="None" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" Margin="10" FontSize="24" Background="WhiteSmoke">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border BorderThickness="0" Background="#FF470202" Grid.Column="0" Grid.RowSpan="5">
+            <Border.Effect>
+                <DropShadowEffect Color="#FF530000" Direction="0"/>
+            </Border.Effect>
+            <StackPanel Orientation="vertical">
+                <Button x:Name="btnVlasnik" Margin="0,50,0,0" Width="130" Height="60" Content="Vlasnici" Background="#FF470202" Foreground="white" BorderBrush="White" VerticalAlignment="center" Click="btnVlasnik_Click"/>
+                <Button x:Name="btnZaposleni" Margin="0,10,0,0" Width="130" Height="60" Content="Zaposleni" Background="#FF470202" Foreground="white" BorderBrush="White" VerticalAlignment="center" Click="btnZaposleni_Click"/>
+                <Button x:Name="btnMarka" Margin="0,10,0,0" Width="130" Height="60" Content="Marke" Background="#FF470202" Foreground="white" BorderBrush="White" VerticalAlignment="center" Click="btnMarka_Click" />
+                
+                <Button x:Name="btnIzlaz" Margin="0,380,0,0" Width="130" Height="60" Content="Odjava" Background="#FF470202" Foreground="white" BorderBrush="White" VerticalAlignment="center" Click="btnIzlaz_Click"/>
+            </StackPanel>
+        </Border>
+        <Border BorderThickness="0" Background="#FF470202" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0"/>
+        <Border BorderThickness="0" Background="#FF470202" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0">
+            <Border.Effect>
+                <DropShadowEffect Color="#FF530000" Direction="300"/>
+            </Border.Effect>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnVozila" Margin="0,0,0,0" Width="170" Height="42" Content="Vozila" Background="#FF470202" Foreground="white" BorderBrush="White" VerticalAlignment="center" Click="btnVozila_Click"/>
+                <Button x:Name="btnRadniNalozi" Margin="10,0,0,0" Width="170" Height="42" Content="Radni nalozi" Background="#FF470202" Foreground="white" BorderBrush="White" VerticalAlignment="center" Click="btnRadniNalozi_Click"/>
+                <Button x:Name="btnDelovi" Margin="10,0,0,0" Width="170" Height="42" Content="Delovi/Usluge" Background="#FF470202" Foreground="white" BorderBrush="White" VerticalAlignment="center" Click="btnDelovi_Click" />
+                <Button x:Name="btnFakture" Margin="10,0,0,0" Width="170" Height="42" Content="Fakture" Background="#FF470202" Foreground="white" BorderBrush="White" VerticalAlignment="center" Click="btnFakture_Click"/>
+                <Button x:Name="btnGarancije" Margin="10,0,0,0" Width="170" Height="42" Content="Garancije" Background="#FF470202" Foreground="white" BorderBrush="White" VerticalAlignment="center" Click="btnGarancije_Click"/>
+            </StackPanel>
+        </Border>
+        <TextBlock x:Name="tbNaslov" Grid.Column="3" Width="250" MaxWidth="250" Text="Naslov" Foreground="White" TextAlignment="Right" Padding="5,3,15,0" HorizontalAlignment="Right" FontWeight="DemiBold" FontSize="32"/>
+        <StackPanel Grid.Column="3" Grid.Row="3" Grid.RowSpan="3" Orientation="Vertical" VerticalAlignment="center" HorizontalAlignment="center">
+            <Image x:Name="image"  VerticalAlignment="center" HorizontalAlignment="center" Grid.Column="2"  Height="300" Grid.RowSpan="8" Width="276">
+                <Image.Source>
+                    <BitmapImage UriSource="/images/login.png"/>
+                </Image.Source>
+            </Image>
+            <Label x:Name="lblDatum" HorizontalAlignment="center" Margin="0,-5,0,0" Content="Datum:" FontSize="26" />
+            <Label x:Name="lblBrojVozila" HorizontalAlignment="center" Margin="0,-5,0,0" Content="Broj vozila u bazi:" FontSize="26" />
+            <Label x:Name="lblNaloga" HorizontalAlignment="center" Margin="0,-5,0,0" Content="Broj radnih naloga u bazi:" FontSize="26" />
+            <Label x:Name="lblBrojFaktura" HorizontalAlignment="center" Margin="0,-5,0,0" Content="Broj faktura u bazi:" FontSize="26" />
+        </StackPanel>
+        <Grid x:Name="grid" Grid.Column="3" Grid.Row="3" Grid.RowSpan="3">
+
+        </Grid>
+    </Grid>
+</Window>
